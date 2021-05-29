@@ -13,7 +13,7 @@ public interface FoodMapper {
     @Mapping(target = "restaurantId", expression = "java(food.getRestaurant().getRestaurantId())")
     FoodDto mapFoodToDto(Food food);
 
-    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "id", source = "foodDto.id")
     @Mapping(target = "imageUrl", source = "foodDto.imageUrl")
     Food map(FoodDto foodDto, Restaurant restaurant);
 }

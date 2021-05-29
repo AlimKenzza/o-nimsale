@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.Instant;
 
 @Data
 @Entity
@@ -17,10 +18,14 @@ public class Item {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "food_id")
-    private Food food;
-
+//    @OneToOne(fetch = FetchType.LAZY, optional = false)
+//    @JoinColumn(name = "food_id", nullable = false)
+//    private Food food;
+    private int quantity;
+    private int price;
+    private Instant createdDate;
+    private String name;
+    private String imageUrl;
     @ManyToOne
     @JoinColumn(name = "orderId")
     private Order order;

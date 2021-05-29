@@ -40,7 +40,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .antMatchers("/api/food/**")
                 .permitAll()
-                .antMatchers("/api/posts/all")
+                .antMatchers("/api/item/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated();

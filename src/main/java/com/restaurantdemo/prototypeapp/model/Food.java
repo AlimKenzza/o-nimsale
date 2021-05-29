@@ -20,11 +20,12 @@ public class Food {
     private Long id;
     private String foodName;
     private int price;
-    private int quantity;
     @ManyToOne
     @JoinColumn(name = "restaurant_id")
     private Restaurant restaurant;
     private String imageUrl;
-    @OneToMany(mappedBy = "food", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Item> items;
+//    @OneToOne(fetch = FetchType.LAZY,
+//            cascade =  CascadeType.ALL,
+//            mappedBy = "food")
+//    private Item item;
 }

@@ -8,10 +8,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class FoodDto {
+public class OrderItemDto {
     private Long id;
-    private String foodName;
-    private String imageUrl;
+    private String name;
     private int price;
-    private Long restaurantId;
+    private int quantity;
+    private String imageUrl;
+    private Long orderId;
 }
