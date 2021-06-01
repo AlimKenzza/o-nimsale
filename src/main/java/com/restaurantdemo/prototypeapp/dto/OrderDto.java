@@ -8,12 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderItemDto {
-    private Long id;
-    private String name;
-    private int price;
-    private int quantity;
-    private String imageUrl;
+public class OrderDto {
     private Long orderId;
-    private String username;
+    private Long userId;
 }

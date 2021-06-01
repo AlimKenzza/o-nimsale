@@ -26,6 +26,7 @@ public class Item {
     private Instant createdDate;
     private String name;
     private String imageUrl;
+    private String username;
     @ManyToOne
     @JoinColumn(name = "orderId")
     private Order order;

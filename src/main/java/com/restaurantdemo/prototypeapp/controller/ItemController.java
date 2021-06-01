@@ -2,6 +2,7 @@ package com.restaurantdemo.prototypeapp.controller;
 
 
 import com.restaurantdemo.prototypeapp.dto.OrderItemDto;
+import com.restaurantdemo.prototypeapp.dto.OrderUserDto;
 import com.restaurantdemo.prototypeapp.service.OrderItemService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -37,5 +38,10 @@ public class ItemController {
     public ResponseEntity<?> deleteOrder(@PathVariable("id") Long id) {
         orderItemService.deleteOrder(id);
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @GetMapping("/by-username/{username}")
+    public ResponseEntity<List<OrderUserDto>> getAllItemsForUser(@PathVariable String username) {
+        return ResponseEntity.status(OK).body(orderItemService.getAllFoodsForUser(username));
     }
 }
