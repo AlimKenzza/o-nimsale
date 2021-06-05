@@ -65,9 +65,11 @@ public class OrderItemService {
         itemRepository.deleteOrderById(id);
     }
 
+
+    @Transactional(readOnly = true)
     public List<OrderUserDto> getAllFoodsForUser(String username) {
-        User user = userRepository.findByUsername(username).orElseThrow(() -> new UserNotFoundException(username));
-        return itemRepository.findByUsername(user)
+//        User user = userRepository.findByUsername(username).orElseThrow(() -> new UserNotFoundException(username));
+        return itemRepository.findByUsername(username)
                 .stream().map(orderUserMapper::mapOrderUserToDto).collect(toList());
     }
 

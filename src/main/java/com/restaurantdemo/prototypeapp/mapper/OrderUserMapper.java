@@ -11,6 +11,6 @@ import org.mapstruct.Mapping;
 @Mapper(componentModel = "spring")
 public interface OrderUserMapper {
 
-    @Mapping(target = "username", expression = "java(item.getOrder().getUser().getUsername())")
+//    @Mapping(target = "username", expression = "java(item.getOrder().getUser().getUsername())")
     OrderUserDto mapOrderUserToDto(Item item);
 }

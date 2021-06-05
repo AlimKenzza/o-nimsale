@@ -13,5 +13,5 @@ import java.util.List;
 public interface ItemRepository extends JpaRepository<Item, Long> {
     List<Item> findAllItemsByOrder(Order order);
     void deleteOrderById(Long id);
-    List<Item> findByUsername(User user);
+    List<Item> findByUsername(String username);
 }

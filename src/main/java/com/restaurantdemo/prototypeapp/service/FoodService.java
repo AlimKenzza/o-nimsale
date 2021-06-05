@@ -12,6 +12,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
@@ -44,6 +45,7 @@ public class FoodService {
                 .orElseThrow(() -> new SpringAppException("No food found with ID - " + id));
         return foodMapper.mapFoodToDto(food);
     }
+
 
     public List<FoodDto> getAllFoodsForRestaurant(Long restaurantId) {
         Restaurant restaurant = restaurantRepository.findById(restaurantId).orElseThrow(() -> new RestaurantNotFoundException(restaurantId.toString()));

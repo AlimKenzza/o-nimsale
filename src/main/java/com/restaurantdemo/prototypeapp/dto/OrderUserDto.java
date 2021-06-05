@@ -12,6 +12,7 @@ public class OrderUserDto {
     private int orderId;
     private String username;
     private String name;
+    private String imageUrl;
     private int quantity;
     private int price;
 }
