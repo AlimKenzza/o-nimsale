@@ -27,6 +27,7 @@ public class Item {
     private String name;
     private String imageUrl;
     private String username;
+    private Long groupId;
     @ManyToOne
     @JoinColumn(name = "orderId")
     private Order order;
@@ -93,5 +94,13 @@ public class Item {
 
     public void setOrder(Order order) {
         this.order = order;
+    }
+
+    public Long getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(Long groupId) {
+        this.groupId = groupId;
     }
 }

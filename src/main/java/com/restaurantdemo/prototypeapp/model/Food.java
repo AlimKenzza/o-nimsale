@@ -24,6 +24,9 @@ public class Food {
     @JoinColumn(name = "restaurant_id")
     private Restaurant restaurant;
     private String imageUrl;
+    private Integer promotion;
+    private Integer afterPromotionPrice;
+    private Integer productType;
 //    @OneToOne(fetch = FetchType.LAZY,
 //            cascade =  CascadeType.ALL,
 //            mappedBy = "food")

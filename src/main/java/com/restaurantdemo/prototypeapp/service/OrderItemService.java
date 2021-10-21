@@ -1,18 +1,13 @@
 package com.restaurantdemo.prototypeapp.service;
 
 
-import com.restaurantdemo.prototypeapp.dto.FoodDto;
 import com.restaurantdemo.prototypeapp.dto.OrderItemDto;
 import com.restaurantdemo.prototypeapp.dto.OrderUserDto;
-import com.restaurantdemo.prototypeapp.exceptions.FoodNotFoundException;
 import com.restaurantdemo.prototypeapp.exceptions.OrderNotFoundException;
-import com.restaurantdemo.prototypeapp.exceptions.UserNotFoundException;
 import com.restaurantdemo.prototypeapp.mapper.ItemMapper;
 import com.restaurantdemo.prototypeapp.mapper.OrderUserMapper;
-import com.restaurantdemo.prototypeapp.model.Food;
 import com.restaurantdemo.prototypeapp.model.Item;
 import com.restaurantdemo.prototypeapp.model.Order;
-import com.restaurantdemo.prototypeapp.model.User;
 import com.restaurantdemo.prototypeapp.repository.FoodRepository;
 import com.restaurantdemo.prototypeapp.repository.ItemRepository;
 import com.restaurantdemo.prototypeapp.repository.OrderRepository;

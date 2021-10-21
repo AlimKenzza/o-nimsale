@@ -14,4 +14,7 @@ public class FoodDto {
     private String imageUrl;
     private int price;
     private Long restaurantId;
+    private int promotion;
+    private int afterPromotionPrice;
+    private int productType;
 }

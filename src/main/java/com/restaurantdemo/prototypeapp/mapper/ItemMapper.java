@@ -2,7 +2,6 @@ package com.restaurantdemo.prototypeapp.mapper;
 
 
 import com.restaurantdemo.prototypeapp.dto.OrderItemDto;
-import com.restaurantdemo.prototypeapp.model.Food;
 import com.restaurantdemo.prototypeapp.model.Item;
 import com.restaurantdemo.prototypeapp.model.Order;
 import org.mapstruct.Mapper;

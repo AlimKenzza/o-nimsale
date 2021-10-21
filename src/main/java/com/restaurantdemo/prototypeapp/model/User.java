@@ -34,6 +34,7 @@ public class User {
     private boolean enabled;
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Order> orderList;
+
 //    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 //    @JoinTable(
 //            name = "users_roles",

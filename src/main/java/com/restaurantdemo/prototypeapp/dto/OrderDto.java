@@ -11,4 +11,5 @@ import lombok.NoArgsConstructor;
 public class OrderDto {
     private Long orderId;
     private Long userId;
+    private Long companyId;
 }

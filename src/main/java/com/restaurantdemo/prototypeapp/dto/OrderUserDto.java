@@ -14,5 +14,6 @@ public class OrderUserDto {
     private String name;
     private String imageUrl;
     private int quantity;
+    private Long groupId;
     private int price;
 }

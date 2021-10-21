@@ -23,6 +23,7 @@ public class Order {
     @JoinColumn(name = "userId")
     private User user;
 
+    private Long companyId;
     public Long getOrderId() {
         return orderId;
     }
@@ -45,5 +46,13 @@ public class Order {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public Long getCompanyId() {
+        return companyId;
+    }
+
+    public void setCompanyId(Long companyId) {
+        this.companyId = companyId;
     }
 }

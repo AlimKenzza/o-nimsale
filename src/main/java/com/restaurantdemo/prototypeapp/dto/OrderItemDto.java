@@ -16,4 +16,5 @@ public class OrderItemDto {
     private String imageUrl;
     private Long orderId;
     private String username;
+    private Long groupId;
 }

@@ -38,4 +38,9 @@ public class FoodController {
     public ResponseEntity<List<FoodDto>> getAllFoodsForMenu(@PathVariable Long restaurantId) {
         return ResponseEntity.status(OK).body(foodService.getAllFoodsForRestaurant(restaurantId));
     }
+
+    @GetMapping("/by-productType/{productType}")
+    public ResponseEntity<List<FoodDto>> getAllFoodsByProductType(@PathVariable Integer productType) {
+        return ResponseEntity.status(OK).body(foodService.getAllFoodsForProductType(productType));
+    }
 }

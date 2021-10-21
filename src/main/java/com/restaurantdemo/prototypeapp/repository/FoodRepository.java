@@ -11,4 +11,5 @@ import java.util.List;
 @Repository
 public interface FoodRepository extends JpaRepository<Food, Long> {
     List<Food> findByRestaurant(Restaurant restaurant);
+    List<Food> findAllByProductType(Integer productType);
 }
