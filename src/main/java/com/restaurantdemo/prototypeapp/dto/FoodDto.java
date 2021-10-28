@@ -17,4 +17,5 @@ public class FoodDto {
     private int promotion;
     private int afterPromotionPrice;
     private int productType;
+    private String buyUrl;
 }

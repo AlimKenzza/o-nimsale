@@ -27,6 +27,7 @@ public class Food {
     private Integer promotion;
     private Integer afterPromotionPrice;
     private Integer productType;
+    private String buyUrl;
 //    @OneToOne(fetch = FetchType.LAZY,
 //            cascade =  CascadeType.ALL,
 //            mappedBy = "food")
