@@ -1,7 +1,7 @@
 package com.restaurantdemo.prototypeapp;
 
-import com.restaurantdemo.prototypeapp.model.Restaurant;
-import com.restaurantdemo.prototypeapp.repository.RestaurantRepository;
+import com.restaurantdemo.prototypeapp.model.BrandStore;
+import com.restaurantdemo.prototypeapp.repository.BrandStoreRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -16,44 +16,44 @@ import java.util.Optional;
 @SpringBootTest
 class PrototypeappApplicationTests {
     @Autowired
-    private RestaurantRepository restaurantRepository;
+    private BrandStoreRepository brandStoreRepository;
 
     @Test
-    public void testCreateRestaurant() {
-        String restaurantName = "RestFood";
-        Restaurant restaurant = new Restaurant();
-        restaurant.setRestaurantName(restaurantName);
-        restaurant.setImageUrl("Some image rest");
-        restaurant.setRestaurantId(100L);
-        restaurant.setLocation("Some location rest");
-        restaurantRepository.save(restaurant);
-        assertNotNull(restaurantRepository.findByRestaurantName(restaurantName).get());
+    public void testCreateStore() {
+        String storeName = "Zara2";
+        BrandStore store = new BrandStore();
+        store.setStoreName(storeName);
+        store.setImageUrl("Some clothes");
+        store.setStoreId(100L);
+        store.setLocation("Some location rest endpoint");
+        brandStoreRepository.save(store);
+        assertNotNull(brandStoreRepository.findByStoreName(storeName).get());
     }
 
     @Test
     public void testGetAll() {
-        List<Restaurant> restaurantList = restaurantRepository.findAll();
-        assertThat(restaurantList).size().isGreaterThan(0);
+        List<BrandStore> storeList = brandStoreRepository.findAll();
+        assertThat(storeList).size().isGreaterThan(0);
     }
 
     @Test
-    public void testSingleRestaurant() {
-        Optional<Restaurant> restaurant = restaurantRepository.findById(5L);
-        assertEquals("RestFood", restaurant.get().getRestaurantName());
+    public void testSingleStore() {
+        Optional<BrandStore> store = brandStoreRepository.findById(5L);
+        assertEquals("RestFood", store.get().getStoreName());
     }
 
     @Test
     public void testUpdate() {
-        Optional<Restaurant> restaurant = restaurantRepository.findById(5L);
-        restaurant.get().setRestaurantName("NewRestFood");
-        restaurantRepository.save(restaurant.get());
-        assertNotEquals("RestFood", restaurant.get().getRestaurantName());
+        Optional<BrandStore> store = brandStoreRepository.findById(5L);
+        store.get().setStoreName("NewRestFood");
+        brandStoreRepository.save(store.get());
+        assertNotEquals("RestFood", store.get().getStoreName());
     }
 
     @Test
     public void testDelete() {
-        restaurantRepository.deleteById(4L);
-        assertThat(restaurantRepository.existsById(4L)).isFalse();
+        brandStoreRepository.deleteById(4L);
+        assertThat(brandStoreRepository.existsById(4L)).isFalse();
     }
 
 

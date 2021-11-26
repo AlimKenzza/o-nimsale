@@ -8,7 +8,7 @@ import com.restaurantdemo.prototypeapp.mapper.ItemMapper;
 import com.restaurantdemo.prototypeapp.mapper.OrderUserMapper;
 import com.restaurantdemo.prototypeapp.model.Item;
 import com.restaurantdemo.prototypeapp.model.Order;
-import com.restaurantdemo.prototypeapp.repository.FoodRepository;
+import com.restaurantdemo.prototypeapp.repository.GarmentRepository;
 import com.restaurantdemo.prototypeapp.repository.ItemRepository;
 import com.restaurantdemo.prototypeapp.repository.OrderRepository;
 import com.restaurantdemo.prototypeapp.repository.UserRepository;
@@ -24,7 +24,7 @@ import static java.util.stream.Collectors.toList;
 @AllArgsConstructor
 public class OrderItemService {
     private final ItemRepository itemRepository;
-    private final FoodRepository foodRepository;
+    private final GarmentRepository garmentRepository;
     private final OrderRepository orderRepository;
     private final ItemMapper itemMapper;
     private final UserRepository userRepository;

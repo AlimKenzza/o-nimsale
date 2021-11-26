@@ -7,9 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class RestaurantDto {
-    private Long restaurantId;
-    private String restaurantName;
+public class StoreDto {
+    private Long storeId;
+    private String storeName;
     private String location;
     private String imageUrl;
 }

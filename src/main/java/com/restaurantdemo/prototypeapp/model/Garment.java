@@ -11,22 +11,22 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name = "food")
+@Table(name = "garment")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Food {
+public class Garment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String foodName;
+    private String garmentName;
     private int price;
     @ManyToOne
-    @JoinColumn(name = "restaurant_id")
-    private Restaurant restaurant;
+    @JoinColumn(name = "store_id")
+    private BrandStore store;
     private String imageUrl;
     private Integer promotion;
     private Integer afterPromotionPrice;
-    private Integer productType;
+    private Integer garmentType;
     private String buyUrl;
 //    @OneToOne(fetch = FetchType.LAZY,
 //            cascade =  CascadeType.ALL,
