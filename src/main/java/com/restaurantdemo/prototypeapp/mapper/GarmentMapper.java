@@ -15,5 +15,5 @@ public interface GarmentMapper {
 
     @Mapping(target = "id", source = "garmentDto.id")
     @Mapping(target = "imageUrl", source = "garmentDto.imageUrl")
-    Garment map(GarmentDto garmentDto, BrandStore brandStore);
+    Garment map(GarmentDto garmentDto, BrandStore store);
 }
